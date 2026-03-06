@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIM800 Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f5f7fb;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      max-width: 800px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>SIM800 Dashboard</h1>
+    <p><strong>Status:</strong> <span id="status">Loading...</span></p>
+    <p><strong>Received At:</strong> <span id="receivedAt">-</span></p>
+    <button onclick="loadLatest()">Refresh</button>
+    <h3>Latest Payload</h3>
+    <pre id="payload">Loading...</pre>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
